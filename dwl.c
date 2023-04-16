@@ -257,6 +257,7 @@ static void pointerfocus(Client *c, struct wlr_surface *surface,
 static void printstatus(void);
 static void quit(const Arg *arg);
 static void quitsignal(int signo);
+static void restartdwl(const Arg *arg);
 static void rendermon(struct wl_listener *listener, void *data);
 static void requeststartdrag(struct wl_listener *listener, void *data);
 static void resize(Client *c, int x, int y, int w, int h, int interact);
@@ -1630,6 +1631,15 @@ void
 quitsignal(int signo)
 {
 	quit(NULL);
+}
+
+void
+restartdwl(const Arg *arg)
+{
+    FILE *fp;
+    fp = fopen ("/tmp/restart_dwl", "w");
+    fclose(fp);
+    quit(0);
 }
 
 void

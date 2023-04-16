@@ -73,12 +73,14 @@
         packages.default = pkgs.stdenv.mkDerivation rec {
             pname   = "dwl";
             version = "0.3.1";
-          
+            enable-xwayland = true; 
+
             src = pkgs.fetchFromGitHub {
               owner = "spydr073";
-              repo  = "dwl";
-              rev   = "custom-0.3.1";
+              repo  = pname;
+              rev   = "custom-${version}";
               hash  = "sha256-832iwkrnuyTPSsMjtr5GHihbw2ILf72r4SDLHvgmgM4=";
+
               #owner = "djpohly";
               #repo  = pname;
               #rev   = "v${version}";
@@ -95,7 +97,7 @@
               wayland
               wayland-protocols
               wlroots
-            #] ++ lib.optionals enable-xwayland [
+            ] ++ lib.optionals enable-xwayland [
               xorg.libX11
               xwayland
             ];
