@@ -77,7 +77,7 @@
             src = pkgs.fetchFromGitHub {
               owner = "spydr073";
               repo  = "dwl";
-              rev   = "custom";
+              rev   = "custom-0.4";
               hash  = "sha256-DxmhwBA5IgjghBG11+NLho2pTAn7oFHTg+SOZqi+NdE=";
               #owner = "djpohly";
               #repo  = pname;
