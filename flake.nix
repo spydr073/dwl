@@ -71,16 +71,15 @@
       
         #packages.default = pkgs.dwl; 
         packages.default = pkgs.stdenv.mkDerivation rec {
-            #pname   = "dwl";
-            #version = "0.3.1";
+            pname   = "dwl";
+            version = "0.4";
           
             src = pkgs.fetchFromGitHub {
               owner = "spydr073";
-              repo  = "dwl";
-              rev   = "custom";
+              rev   = "custom-0.4";
               hash  = "sha256-DxmhwBA5IgjghBG11+NLho2pTAn7oFHTg+SOZqi+NdE=";
               #owner = "djpohly";
-              #repo  = pname;
+              repo  = pname;
               #rev   = "v${version}";
               #hash  = "sha256-VHxBjjnzJNmtJxrm3ywJzvt2bNHGk/Cx8TICw6SaoiQ=";
             };
