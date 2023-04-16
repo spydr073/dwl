@@ -78,7 +78,7 @@
               owner = "spydr073";
               repo  = "dwl";
               rev   = "custom-0.3.1";
-              #hash  = "sha256-DxmhwBA5IgjghBG11+NLho2pTAn7oFHTg+SOZqi+NdE=";
+              hash  = "sha256-832iwkrnuyTPSsMjtr5GHihbw2ILf72r4SDLHvgmgM4=";
               #owner = "djpohly";
               #repo  = pname;
               #rev   = "v${version}";
